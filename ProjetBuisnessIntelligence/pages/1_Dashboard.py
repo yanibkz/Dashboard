@@ -7,7 +7,7 @@ st.set_page_config(page_title="Dashboard - Engagement", layout="wide")
 
 
 
-df = pd.read_csv("final2.csv")
+df = pd.read_csv("final.csv")
 
 st.title("KPI Dashboard - Engagement des Contributeurs")
 st.subheader("Visualisez les indicateurs clés de performance")
