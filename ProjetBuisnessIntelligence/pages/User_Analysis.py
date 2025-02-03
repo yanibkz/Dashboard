@@ -5,9 +5,12 @@ import plotly.express as px
 # Charger les données
 @st.cache_data
 def load_data():
-    return pd.read_csv("final2.csv")  # Assurez-vous que le fichier CSV est correct
+    url = "https://drive.google.com/uc?id=1U0nzNvtw8Y09GbQcAPvnJ7AnrIjh2K_W"
+    df = pd.read_csv(url)
+    return df
 
 df = load_data()
+
 
 # Vérifier les colonnes disponibles
 if "visitor_id" not in df.columns or "session_id" not in df.columns:
