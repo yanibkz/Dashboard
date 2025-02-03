@@ -5,9 +5,13 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="Dashboard - Engagement", layout="wide")
 
+@st.cache_data
+def load_data():
+    url = "https://drive.google.com/uc?id=1U0nzNvtw8Y09GbQcAPvnJ7AnrIjh2K_W"
+    df = pd.read_csv(url)
+    return df
 
-
-df = pd.read_csv("final.csv")
+df = load_data()
 
 st.title("KPI Dashboard - Engagement des Contributeurs")
 st.subheader("Visualisez les indicateurs clés de performance")
