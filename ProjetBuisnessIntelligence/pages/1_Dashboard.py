@@ -5,12 +5,9 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="Dashboard - Engagement", layout="wide")
 
-@st.cache_data
-def load_data():
-    df = pd.read_csv("final2.csv")  # Remplacez par votre fichier de données
-    return df
 
-df = load_data()
+
+df = pd.read_csv("final2.csv")
 
 st.title("KPI Dashboard - Engagement des Contributeurs")
 st.subheader("Visualisez les indicateurs clés de performance")
